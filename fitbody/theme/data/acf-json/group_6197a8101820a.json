@@ -1,0 +1,184 @@
+{
+    "key": "group_6197a8101820a",
+    "title": "Block - Instagram",
+    "fields": [
+        {
+            "key": "field_6197a8101dc32",
+            "label": "Display this block?",
+            "name": "display_block_instagram",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6197a810215ca",
+            "label": "Instagram block options",
+            "name": "block_instagram",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6197a8101dc32",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_6197a81029210",
+                    "label": "Nav anchor",
+                    "name": "nav_anchor",
+                    "type": "text",
+                    "instructions": "Section hash, used for scroll navigation<br>\r\nUse the section's title in slug format ​- lowercase only, words separated by dashes, no spaces or other symbols allowed",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6197a86891713",
+                    "label": "Instagram handle",
+                    "name": "handle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "@",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6197a89591714",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "Defaults to \"Follow us\" if left empty",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6197a95a91717",
+                    "label": "Photo display style",
+                    "name": "photo_display_style",
+                    "type": "true_false",
+                    "instructions": "Randomize or display static photos.<br>\r\nRandomize selects 10 photos in a random order from the pool and displays new selections each page reload.<br>\r\nStatic displays the first 10 photos in the entered order.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Randomize",
+                    "ui_off_text": "Static"
+                },
+                {
+                    "key": "field_6197a8be91715",
+                    "label": "Photos",
+                    "name": "photos",
+                    "type": "repeater",
+                    "instructions": "2 rows of 5 photos will be displayed.<br>\r\nEnter a minimum of 10 photos.<br>\r\nIf more than 10 photos are entered, they are used for randomization.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 10,
+                    "max": 20,
+                    "layout": "table",
+                    "button_label": "Add photo",
+                    "sub_fields": [
+                        {
+                            "key": "field_6197a8d291716",
+                            "label": "Photo",
+                            "name": "photo",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "jpg, png, jpeg, webp"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-front-page.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1639846455
+}

@@ -1,0 +1,119 @@
+{
+    "key": "group_6135e1cb5bfe7",
+    "title": "Placeholder images (Global)",
+    "fields": [
+        {
+            "key": "field_6135e2f789f4d",
+            "label": "Generic placeholder",
+            "name": "placeholder_img_generic",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, WEBP, GIF, SVG"
+        },
+        {
+            "key": "field_615c6124973e9",
+            "label": "Program placeholder",
+            "name": "placeholder_img_program",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, WEBP, GIF, SVG"
+        },
+        {
+            "key": "field_6135e1d9ab506",
+            "label": "Product placeholder",
+            "name": "placeholder_img_product",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, WEBP, GIF, SVG"
+        },
+        {
+            "key": "field_6135e22bab507",
+            "label": "Blog placeholder",
+            "name": "placeholder_img_blog",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, WEBP, GIF, SVG"
+        },
+        {
+            "key": "field_6135e25aab508",
+            "label": "Trainer placeholder",
+            "name": "placeholder_img_trainer",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, WEBP, GIF, SVG"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Theme Settings",
+    "modified": 1633444159
+}

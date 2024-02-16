@@ -1,0 +1,866 @@
+{
+    "key": "group_6140a2f6d60e5",
+    "title": "Program options",
+    "fields": [
+        {
+            "key": "field_6140a4c5651ad",
+            "label": "Program type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "challenge": "Challenge",
+                "package": "Package"
+            },
+            "default_value": "challenge",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6140a56e92a32",
+            "label": "Linked product",
+            "name": "linked_product",
+            "type": "post_object",
+            "instructions": "Connect this program with a WooCommerce product to list it on sale. If no product is connected, this program will not be listed on the site and it will not be purchasable.<br>\r\nAll pricing and availability data displayed on the program page will be acquired from the WC product.<br>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_614c2a9ef83b9",
+            "label": "Start date",
+            "name": "start_date",
+            "type": "date_picker",
+            "instructions": "The kickoff date of this challenge, when the first workout will be unlocked.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6140a4c5651ad",
+                        "operator": "==",
+                        "value": "challenge"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d.m.Y",
+            "return_format": "d.m.Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_6140a88a92a34",
+            "label": "Expiry",
+            "name": "expiry",
+            "type": "number",
+            "instructions": "Determine how long the user has access to this program (in days).<br>\r\nFor challenges, this is calculated from the challenge start date. For packages, this is calculated from the purchase date.<br>\r\nLeave at 0 for no expiry.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 999,
+            "step": 1
+        },
+        {
+            "key": "field_6140abcb92a3b",
+            "label": "Trainers",
+            "name": "trainers",
+            "type": "post_object",
+            "instructions": "The trainers associated with this program.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "trainer"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_6140b381a5628",
+            "label": "Heading",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6140ad5592a3d",
+            "label": "Heading options",
+            "name": "heading",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_616038bd4793f",
+                    "label": "Background image",
+                    "name": "heading_image",
+                    "type": "file",
+                    "instructions": "Page heading background image. Will be automatically cropped to 1920x560 px.<br>\r\nUsed for the main program page if a video has not been set, and for program module pages.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "JPG, PNG, JPEG, SVG, GIF, WEBP"
+                },
+                {
+                    "key": "field_616038dd47940",
+                    "label": "Background video preview",
+                    "name": "heading_video",
+                    "type": "file",
+                    "instructions": "Page heading background video. Displayed only on the program main page. Use a short video loop (up to 10sec or 3mb).<br>\r\nOptional, will override background image if present.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": 5,
+                    "mime_types": "MP4, WAV, WMV, WEBM, FLV"
+                },
+                {
+                    "key": "field_6140ae7792a41",
+                    "label": "Video introduction",
+                    "name": "intro_video",
+                    "type": "url",
+                    "instructions": "The main extended introductory\/marketing video for the program. Displayed in a modal that can be opened via a Play button in the program page's heading. Enter embed URL.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6140b3b8a5629",
+            "label": "Overview",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6140a9a392a35",
+            "label": "Overview options",
+            "name": "overview",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_6140aabc92a36",
+                    "label": "Difficulty level",
+                    "name": "difficulty",
+                    "type": "select",
+                    "instructions": "The approximate difficulty level of this program. What kind of users is it for?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "beginner": "Beginner",
+                        "intermediate": "Intermediate",
+                        "advanced": "Advanced"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6140ab0c92a37",
+                    "label": "Length",
+                    "name": "length",
+                    "type": "text",
+                    "instructions": "Total duration of this program. Enter a number and an amount of time.<br>\r\nExample: 2 weeks",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6140ab2e92a38",
+                    "label": "Workout frequency",
+                    "name": "workout_frequency",
+                    "type": "text",
+                    "instructions": "The average amount of workouts (program parts) per week.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6140ab4092a39",
+                    "label": "Language",
+                    "name": "language",
+                    "type": "text",
+                    "instructions": "Spoken and\/or subtitled languages this program is available in. Enter a comma separated list.<br>\r\nExample: Estonian, English, Russian",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6140ab4f92a3a",
+                    "label": "Gear required",
+                    "name": "required_gear",
+                    "type": "checkbox",
+                    "instructions": "List of gear required to participate in this program. Displayed as icons for a quick overview.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mat": "Mat",
+                        "weights": "Weights",
+                        "jumprope": "Jumprope",
+                        "rubberband": "Rubber band",
+                        "bootyband": "Booty band"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "array",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_6141a530e5acb",
+                    "label": "Community group",
+                    "name": "group",
+                    "type": "url",
+                    "instructions": "The URL to the closed Facebook or other community group that users are invited to join upon purchasing this program.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6140b3d3a562a",
+            "label": "Content",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6140ac9792a3c",
+            "label": "Content options",
+            "name": "content",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_6140afec92a46",
+                    "label": "Introduction content",
+                    "name": "introduction_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61488d68e98a8",
+                            "label": "Normal",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_61488e0be98ac",
+                            "label": "Introduction content title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"Program introduction\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61488dade98aa",
+                            "label": "Introduction content text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "Short introduction text displayed at the top of the program page. Briefly describe this program - who it's for, why they should participate, etc. Separate content is displayed to users who have purchased the course, and those who have not.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_61488d83e98a9",
+                            "label": "Owned",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_61488e2ae98ad",
+                            "label": "Introduction content title",
+                            "name": "title_owned",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"Program introduction\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61488de9e98ab",
+                            "label": "Introduction content text",
+                            "name": "text_owned",
+                            "type": "wysiwyg",
+                            "instructions": "Short introduction text displayed at the top of the program page. Briefly describe this program - who it's for, why they should participate, etc. Separate content is displayed to users who have purchased the course, and those who have not.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6140bc38481e6",
+                    "label": "Main content",
+                    "name": "main_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6140af9092a43",
+                            "label": "Normal",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_61488c50e98a7",
+                            "label": "Main content title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"Program details\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6140b1b692a49",
+                            "label": "Main content text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "The main longform content of the program. Separate content is displayed to users who have purchased the course, and those who have not.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6140afcf92a44",
+                            "label": "Owned",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_61488c18e98a6",
+                            "label": "Main content title",
+                            "name": "title_owned",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"Program details\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6140b20c92a4a",
+                            "label": "Main content text",
+                            "name": "text_owned",
+                            "type": "wysiwyg",
+                            "instructions": "The main longform content of the program. Separate content is displayed to users who have purchased the course, and those who have not.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6149a64006044",
+                    "label": "Gear content",
+                    "name": "gear_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6149a66e06045",
+                            "label": "Required gear title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"What you'll need\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6140b15792a47",
+                            "label": "Required gear text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "Short text explaining what kinds of gear is required to participate in this program.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6140b18792a48",
+                            "label": "Promoted products",
+                            "name": "products",
+                            "type": "post_object",
+                            "instructions": "A selection of products advertised to the user.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "id",
+                            "ui": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_615af31b1a708",
+                    "label": "Additional materials",
+                    "name": "additional_materials",
+                    "type": "group",
+                    "instructions": "Additional materials available for users who have purchased this program",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61be168002fa4",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Optional title override. Defaults to \"Bonus materials\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61be15cbe7f9c",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "Short description about the materials.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_61be15dde7f9d",
+                            "label": "Items",
+                            "name": "items",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61be15e9e7f9e",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_61be15f1e7f9f",
+                                    "label": "File",
+                                    "name": "file",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "program"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "excerpt"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1639847992
+}

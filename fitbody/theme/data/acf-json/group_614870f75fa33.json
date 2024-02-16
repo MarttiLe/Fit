@@ -1,0 +1,103 @@
+{
+    "key": "group_614870f75fa33",
+    "title": "Component - Heading",
+    "fields": [
+        {
+            "key": "field_6148711384f6d",
+            "label": "Banner type",
+            "name": "heading_type",
+            "type": "select",
+            "instructions": "The type of background shown at the top of the page. Further options will be available upon selection.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "video": "Video"
+            },
+            "default_value": "image",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6148715984f6e",
+            "label": "Background image",
+            "name": "heading_image",
+            "type": "file",
+            "instructions": "Page heading background image. Will be automatically cropped to 1920x560 px.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6148711384f6d",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "JPG, PNG, JPEG, SVG, GIF, WEBP"
+        },
+        {
+            "key": "field_6148718f84f6f",
+            "label": "Background video preview",
+            "name": "heading_video",
+            "type": "file",
+            "instructions": "Page heading background video. Use a short video loop (up to 10sec or 3mb).",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6148711384f6d",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": 5,
+            "mime_types": "MP4, WAV, WMV, WEBM, FLV"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1632143409
+}

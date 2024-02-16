@@ -1,0 +1,104 @@
+{
+    "key": "group_5e8f383deef38",
+    "title": "Social Media (Global)",
+    "fields": [
+        {
+            "key": "field_5e8f3849f6cb7",
+            "label": "Facebook",
+            "name": "socials_fb",
+            "type": "url",
+            "instructions": "The URL to your Facebook page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e8f3863f6cb8",
+            "label": "Instagram",
+            "name": "socials_ig",
+            "type": "url",
+            "instructions": "The URL to your Instagram page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e9c72b2fbd04",
+            "label": "Youtube",
+            "name": "socials_yt",
+            "type": "url",
+            "instructions": "The URL to your Youtube channel page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e9c72c5fbd05",
+            "label": "Twitter",
+            "name": "socials_tw",
+            "type": "url",
+            "instructions": "The URL to your Twitter page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61164c050e6ce",
+            "label": "LinkedIn",
+            "name": "socials_in",
+            "type": "url",
+            "instructions": "The URL to your LinkedIn page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Theme Settings",
+    "modified": 1628851274
+}
